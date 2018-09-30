@@ -34,4 +34,33 @@ function cumulativeSum(arr) {
   }
   return total;
 }
-console.log(cumulativeSum(2, 3, 4));
+console.log(cumulativeSum([1, 2, 3]));
+
+function primetest(x) {
+  if (x <= 1) return false;
+
+  for (let i = 2; i < x; i++) {
+    if (x % i === 0) return false;
+  }
+  return true;
+}
+function maxPrimeSum(val) {
+  const prime = primGen(val);
+  let sum = 0;
+  let consec = 0;
+  let tmp = consec;
+  let i;
+  for (i = 0; i < prime.length; i++) {
+    tmp = 0;
+    for (let j = i; j < prime.length; j++) {
+      tmp += prime[j];
+      if (tmp > val) break;
+      if ((j - i > consec) && primetest(tmp) && tmp > sum) {
+        consec = j - i;
+        sum = tmp;
+      }
+    }
+  }
+  return [sum, ++consec];
+}
+console.log(maxPrimeSum(1000));
