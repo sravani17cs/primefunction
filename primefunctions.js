@@ -47,10 +47,10 @@ function primetest(x) {
 function maxPrimeSum(val) {
   const prime = primGen(val);
   let sum = 0;
-  let consec = 0;
+  let consec = 0;// counter
   let tmp = consec;
   let i;
-  for (i = 0; i < prime.length; i++) {
+  for (i = 0; i < prime.length; i++) { // looping through the prime array
     tmp = 0;
     for (let j = i; j < prime.length; j++) {
       tmp += prime[j];
@@ -63,4 +63,4 @@ function maxPrimeSum(val) {
   }
   return [sum, ++consec];
 }
-console.log(maxPrimeSum(1000));
+console.log(maxPrimeSum(100));
