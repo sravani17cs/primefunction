@@ -1,6 +1,6 @@
 function primGen(n) {
   const array = [];
-  for (let i = 1; i < n; i++) {
+  for (let i = 1; i < n; i++) { // loop through number given
     if (i === 1) {
       array.push(i);
     } else {
