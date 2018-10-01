@@ -6,7 +6,7 @@ function primGen(n) {
     } else {
       let prime = true;
       for (let j = 2; j < i; j++) {
-        if (i % j === 0) {
+        if (i % j === 0) { // check through for the prime number
           prime = false;
         }
       }
