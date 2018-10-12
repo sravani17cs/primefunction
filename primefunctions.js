@@ -2,7 +2,7 @@ function primGen(n) {
   const array = [];
   for (let i = 1; i < n; i++) { // loop through number given
     if (i === 1) {
-      array.push(i);
+      // array.push(i);
     } else {
       let prime = true;
       for (let j = 2; j < i; j++) {
@@ -17,7 +17,7 @@ function primGen(n) {
   }
   return array;
 }
-console.log(primGen(10));
+console.log(primGen(100));
 
 function cumulativeSum(arr) {
   const total = [];
@@ -44,6 +44,7 @@ function primetest(x) {
   }
   return true;
 }
+
 function maxPrimeSum(val) {
   const prime = primGen(val);
   let sum = 0;
